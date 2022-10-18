@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class AlarmSignalization : MonoBehaviour
 {
     [SerializeField] private AudioClip _alarmSignal;
 
     private AudioSource _audioSource;
-    private float _changingSpeed;
+    private float _changingSpeed = 0.1f;
     private float _targetVolume = 1f;
     private float _currentVolume = 0f;
 
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        _changingSpeed = 0.1f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -2,23 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AudioSource))]
+
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D _rb2d;
     private Vector2 _direction;
     private AudioSource _audioSource;
 
-    [SerializeField] float _speed;
+    [SerializeField] float _speed = 0.1f;
 
     private void Awake()
     {
         _rb2d = GetComponent<Rigidbody2D>();
         _audioSource = GetComponent<AudioSource>();
-
-        if (_speed == 0)
-        {
-            _speed = 0.03f;
-        }
     }
 
     void Start()

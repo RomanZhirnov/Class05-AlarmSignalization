@@ -10,9 +10,8 @@ public class CameraScript : MonoBehaviour
     
     private void Start()
     {
-        //_player = GameObject.FindGameObjectWithTag("Player").transform;
-        _player = GameObject.FindObjectOfType<PlayerController>().transform;
-        //_speed = 5f;
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
+        //_player = GameObject.FindObjectOfType<PlayerController>().transform;
     }
 
     private void Update()
@@ -21,8 +20,6 @@ public class CameraScript : MonoBehaviour
         _targetPosition.y = _player.position.y;
         _targetPosition.z = -10;
 
-        Vector3 newPosition = Vector3.Lerp(transform.position, _targetPosition, _speed);
-        
-        transform.position = newPosition;
+        transform.position = Vector3.Lerp(transform.position, _targetPosition, _speed*Time.deltaTime);
     }
 }
