@@ -51,7 +51,6 @@ public class AlarmSignalization : MonoBehaviour
 
     private IEnumerator AlarmPlay(float targetVolume)
     {
-        Debug.Log("Alarm ON");
 
         do
         {
