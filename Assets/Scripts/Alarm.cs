@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 
-public class AlarmSignalization : MonoBehaviour
+public class Alarm : MonoBehaviour
 {
     [SerializeField] private AudioClip _alarmSignal;
 

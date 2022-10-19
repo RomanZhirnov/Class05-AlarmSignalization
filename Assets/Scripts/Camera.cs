@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Transform))]
 
-public class CameraScript : MonoBehaviour
+public class Camera : MonoBehaviour
 {
     private Vector3 _targetPosition;
     [SerializeField] private float _speed = 10;

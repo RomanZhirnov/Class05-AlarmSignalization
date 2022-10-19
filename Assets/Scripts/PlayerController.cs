@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-    void Start()
+    private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
     }
