@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private Alarm _alarm;
 
     private AudioSource _audioSource;
     private Coroutine _playAlarmSignal;
-    private float _changingSpeed = 0.1f;
+    private float _changingSpeed = 0.001f;
     private float _targetVolume;
 
     private void Start()
@@ -58,7 +60,9 @@ public class SoundManager : MonoBehaviour
         {
             _audioSource.volume = Mathf.MoveTowards(_audioSource.volume, targetVolume, _changingSpeed);
             Debug.Log(_audioSource.volume);
-            yield return new WaitForSeconds(1f);
+            //yield return new WaitForSeconds(1f);
+            yield return null;
         }
     }
+
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(AudioSource))]
 
 public class Alarm : MonoBehaviour
 {
@@ -24,7 +23,7 @@ public class Alarm : MonoBehaviour
         {
            Leaving?.Invoke();
         }
-    } 
+    }
 }
 
 
