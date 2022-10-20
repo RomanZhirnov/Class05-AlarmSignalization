@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
 
     private AudioSource _audioSource;
     private Coroutine _playAlarmSignal;
-    private float _changingSpeed = 0.001f;
+    private float _changingSpeed = 0.0001f;
     private float _targetVolume;
 
     private void Start()
@@ -59,8 +59,6 @@ public class SoundManager : MonoBehaviour
         while (_audioSource.volume != targetVolume)
         {
             _audioSource.volume = Mathf.MoveTowards(_audioSource.volume, targetVolume, _changingSpeed);
-            Debug.Log(_audioSource.volume);
-            //yield return new WaitForSeconds(1f);
             yield return null;
         }
     }

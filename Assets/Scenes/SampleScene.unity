@@ -4924,6 +4924,7 @@ GameObject:
   - component: {fileID: 2058894421}
   - component: {fileID: 2058894424}
   - component: {fileID: 2058894425}
+  - component: {fileID: 2058894426}
   m_Layer: 0
   m_Name: Alarm Sistem
   m_TagString: Untagged
@@ -5036,7 +5037,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e435556f31d5be4981a8a09584e2564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _alarmSignal: {fileID: 8300000, guid: cdde6a0af329a6e41965a3abc598ff38, type: 3}
 --- !u!82 &2058894425
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5051,7 +5051,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5133,3 +5133,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2058894426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058894420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dac7424345a0d4458f77c05a94ecd94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _alarm: {fileID: 2058894424}
